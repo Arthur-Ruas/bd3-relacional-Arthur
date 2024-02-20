@@ -64,10 +64,8 @@ create table tbl_agenda(
     data_cirurgia			varchar(10) not null,
     status_cirurgia			enum('Agendado', 'Concluido', 'Cancelado'),
     
-    constraint pk_agenda primary key (cod_agenda),
-    constraint fk_sala_agenda foreign key (cod_sala) references tbl_sala (cod_sala),
-    constraint fk_medico_agenda foreign key (cod_medico) references tbl_medico (cod_medico),
-    constraint fk_paciente_agenda foreign key (cod_paciente) references tbl_paciente (cod_paciente)
+    constraint pk_agenda primary key (cod_agenda)
 );
+
 
 
