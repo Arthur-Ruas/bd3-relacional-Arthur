@@ -13,7 +13,7 @@ create table tbl_especialidade(
 );
 
 create table tbl_medico(
-    cod_medico          	int unsigned not null,
+    cod_medico          	int unsigned auto_increment,
     cod_especialidade   	int unsigned not null,
     nome_medico         	varchar(500),
     email_medico        	varchar(100),
