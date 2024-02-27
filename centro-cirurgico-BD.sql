@@ -1,4 +1,4 @@
-drop database centro_cirurgico_bd;
+#drop database centro_cirurgico_bd;
 
 create database centro_cirurgico_bd;
 use centro_cirurgico_bd;
@@ -20,8 +20,7 @@ create table tbl_medico(
     telefone_medico     	varchar(10),
     celular_medico      	varchar(11),
 
-    constraint pk_medico primary key (cod_medico),
-    constraint fk_especialidade foreign key (cod_especialidade) references tbl_especialidade (cod_especialidade)
+    constraint pk_medico primary key (cod_medico)
 );
 
 create table tbl_sala(
@@ -29,8 +28,7 @@ create table tbl_sala(
     numero_sala			varchar(10),
     cod_especialidade	int unsigned not null,
     
-    constraint pk_sala primary key (cod_sala),
-    constraint fk_especialidade_sala foreign key (cod_especialidade) references tbl_especialidade (cod_especialidade)
+    constraint pk_sala primary key (cod_sala)
 );
 
 create table tbl_paciente(
@@ -51,8 +49,7 @@ create table tbl_insumos(
 	nome_insumo				varchar(100),
     quantidade_insumo		decimal(10,2),
     
-	constraint pk_insumo primary key (cod_insumos),
-    constraint fk_paciente foreign key (cod_paciente) references tbl_paciente (cod_paciente)
+	constraint pk_insumo primary key (cod_insumos)
 );
 
 create table tbl_agenda(
