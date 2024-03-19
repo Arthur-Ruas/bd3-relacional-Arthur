@@ -41,6 +41,7 @@ select * from listagem_agenda;
 
 
 /*-Excluir as Views-*/
+drop view listagem_geral_medico;
 drop view listagem_medico_especialidade;
 drop view listagem_sala_especialidade;
 drop view listagem_agenda;

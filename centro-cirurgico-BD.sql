@@ -43,6 +43,19 @@ create table tbl_paciente(
     constraint pk_paciente primary key (cod_paciente)
 );
 
+create table tbl_paciente_backup(
+	cod_paciente			int unsigned auto_increment,
+    nome_paciente			varchar(500) not null,
+    telefone_paciente		varchar(10),
+    celular_paciente		varchar(11) not null,
+    email_paciente			varchar(500) not null,
+    nome_responsavel		varchar(500) not null,
+    telefone_responsavel	varchar(11) not null,
+    date_delete				datetime not null,
+    
+    constraint pk_paciente primary key (cod_paciente)
+);
+
 create table tbl_insumos(
 	cod_insumos				int unsigned auto_increment,
     cod_paciente			int unsigned not null,
